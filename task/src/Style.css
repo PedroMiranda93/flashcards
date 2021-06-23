@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap');
+
+.body{
+    background: url('world.png') top no-repeat ;
+    margin: 10px;
+    padding: 10px;
+   <!-- border: 1px red dotted;-->
+    background-size: contain;
+    transform: scale(0.75);
+
+}
+
+
+.title{
+    font-family: 'Lexend Mega', sans-serif;
+    background-color: rgba(255, 255, 255, .8);
+    font-size: 50px;
+    align-self: center;
+    border-bottom: solid #ceefef;
+    position: center ;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.grid-container{
+
+    display: grid;
+    justify-content: center;
+    max-width: 1920px;
+    max-height: 1080px;
+    grid-template-columns: auto  auto auto; /*Make the grid smaller than the container*/
+    grid-gap: 20px;
+    padding: 10px;
+    font-family: 'Lexend Mega', sans-serif;
+
+
+
+}
+.grid-container{
+    perspective: 1000px;
+    position: fixed;
+    left: 35%;
+    right:35%;
+
+}
+
+.country{
+    background: linear-gradient(#e1e8ee, #4ed6d4);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+ .back{
+     background: linear-gradient(#4ed6d4, #e1e8ee);
+     z-index: 1;
+     transform : rotateY(180deg);
+ }
+.country,
+.back{
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Lexend Mega', sans-serif;
+    border-radius: 10px;
+    position: absolute;
+}
+.cards{
+    height: 250px;
+    width: 250px;
+    position: relative;
+    text-align: center;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+
+
+}
+
+.cards:hover{
+    cursor: crosshair;
+    transform: rotateY(180deg);
+    position: relative;
+    transition: all 2s cubic-bezier();
+    transform-style: preserve-3d;
+}
